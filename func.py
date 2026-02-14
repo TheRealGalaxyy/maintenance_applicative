@@ -15,15 +15,6 @@ def listerTaches(taches):
         print("\n" + str(i) + " - " + tache.nomTache + " : " + tache.descriptionTache + " (" + status + ").")
     print("\n")
     
-def changerStatus(taches):
-    numeroTache = input("Veuillez référencer le numéro attribué à la tache :")
+def changerStatus(taches, numeroTache):
     tache = taches[int(numeroTache)]
-    status = "En cours"
-    if tache.status == True:
-        status = "Complété"
-    validation = input("Status actuel : " + status + ". Etes vous sur de vouloir changer le status ? (y/n)")
-    if validation == "y":
-        tache.ChangerStatus()
-        print("Status modifié !\n")
-    else:
-        print ("Opération annulée\n")
+    tache.ChangerStatus()

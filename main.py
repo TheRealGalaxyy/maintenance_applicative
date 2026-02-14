@@ -21,7 +21,8 @@ while continuer:
     elif choix == "2":
         listerTaches(taches)
     elif choix == "3":
-        changerStatus(taches)
+        numeroTache = input("Veuillez renseigner le numéro de la tache:")
+        changerStatus(taches, numeroTache)
     else:
         print("Choix non reconnu")
         
